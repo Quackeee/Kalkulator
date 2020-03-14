@@ -1,0 +1,47 @@
+﻿<Window x:Class="Kalkulator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kalkulator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="360.064">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="4" x:Name="previousCalculation_tb" Foreground="DarkGray" TextAlignment="Right" Background="Black" Height="30" FontSize="12" LineHeight="30" />
+        <TextBlock Grid.Row="1" Grid.ColumnSpan="4" x:Name="display_tb" Foreground="WhiteSmoke" TextAlignment="Right" Height="100" FontSize="50" Background="Black" VerticalAlignment="Center"/>
+        <Button Grid.Row="2" Grid.Column="0" x:Name="plusMinus_btn" Content="⁺∕₋" Click="plusMinus" Background="DarkGray" FontSize="40"></Button>
+        <Button Grid.Row="2" Grid.Column="1" x:Name="CE_btn" Content="CE" Click="clearButton" Background="DarkGray" FontSize="40"></Button>
+        <Button Grid.Row="2" Grid.Column="2" x:Name="C_btn" Content="C" Click="clearButton" Background="DarkGray"  FontSize="40"></Button>
+        <Button Grid.Row="2" Grid.Column="3" x:Name="divide_btn" Content="÷" Click ="operatorInput" Background="DarkOrange" Foreground="WhiteSmoke" FontSize="40"></Button>
+        <Button Grid.Row="3" Grid.Column="0" x:Name="btn7" Content="7" FontSize="40" Click="numericInput"></Button>
+        <Button Grid.Row="3" Grid.Column="1" x:Name="btn8" Content="8" FontSize="40" Click="numericInput"></Button>
+        <Button Grid.Row="3" Grid.Column="2" x:Name="btn9" Content="9" FontSize="40" Click="numericInput"></Button>
+        <Button Grid.Row="3" Grid.Column="3" x:Name="multiply_btn" Content="×" Click ="operatorInput" Background="DarkOrange" Foreground="WhiteSmoke" FontSize="40"></Button>
+        <Button Grid.Row="4" Grid.Column="0" x:Name="btn4" Content="4" FontSize="40" Click="numericInput"></Button>
+        <Button Grid.Row="4" Grid.Column="1" x:Name="btn5" Content="5" FontSize="40" Click="numericInput"></Button>
+        <Button Grid.Row="4" Grid.Column="2" x:Name="btn6" Content="6" FontSize="40" Click="numericInput"></Button>
+        <Button Grid.Row="4" Grid.Column="3" x:Name="minus_btn" Content="-" Click ="operatorInput" Background="DarkOrange" Foreground="WhiteSmoke" FontSize="40"></Button>
+        <Button Grid.Row="5" Grid.Column="0" x:Name="btn1" Content="1" FontSize="40" Click="numericInput"></Button>
+        <Button Grid.Row="5" Grid.Column="1" x:Name="btn2" Content="2" FontSize="40" Click="numericInput"></Button>
+        <Button Grid.Row="5" Grid.Column="2" x:Name="btn3" Content="3" FontSize="40" Click="numericInput"></Button>
+        <Button Grid.Row="5" Grid.Column="3" x:Name="plus_btn" Content="+" Click ="operatorInput" Background="DarkOrange" Foreground="WhiteSmoke" FontSize="40"></Button>
+        <Button Grid.Row="6" Grid.Column="0" x:Name="btn0" Click="numericInput" Grid.ColumnSpan="2" Content="   0" FontSize="40" HorizontalContentAlignment="Left" ></Button>
+        <Button Grid.Row="6" Grid.Column="2" x:Name="point_btn" Content="." Click="point" FontSize="40"></Button>
+        <Button Grid.Row="6" Grid.Column="3" x:Name="equals_btn" Content="=" Click="calculate" FontSize="40" Background="DarkOrange" Foreground="WhiteSmoke"></Button>
+    </Grid>
+</Window>
