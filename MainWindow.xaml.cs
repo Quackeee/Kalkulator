@@ -121,7 +121,7 @@ namespace Kalkulator
             autoClearDisplay();
             if (!displayEmpty())
             {
-                evaluateFromDisplay(display_tb.Text);
+                evaluateFromDisplay();
             }
             else
             {

@@ -20,8 +20,7 @@ namespace Kalkulator
               System.Runtime.Serialization.SerializationInfo info,
               System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
         }
-
-
+        
         bool isOperator(char c)
         {
             if (c == '-' || c == '÷' || c == '×' || c == '+') return true;

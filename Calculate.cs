@@ -91,12 +91,21 @@ namespace Kalkulator
             
         }
 
-        void evaluateFromDisplay(string s)
+        void evaluateFromDisplay()
         {
+            if (isOperator(lastEntry()) || lastEntry()=='.')
+            {
+                removeLastEntry();
+            }
+
             previousCalculation_tb.Text = display_tb.Text;
+
+            if (display_tb.Text[0] == '-')
+                display_tb.Text = '0' + display_tb.Text;
+
             try
             {
-                display_tb.Text = calculatePostfixExpression(toPostfix(generateRawOutput(s))).ToString();
+                display_tb.Text = calculatePostfixExpression(toPostfix(generateRawOutput(display_tb.Text))).ToString();
             } catch (DivisionByZeroException)
             {
                 display_tb.Text = "err div0";
