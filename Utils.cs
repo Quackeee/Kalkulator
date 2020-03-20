@@ -20,7 +20,11 @@ namespace Kalkulator
               System.Runtime.Serialization.SerializationInfo info,
               System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
         }
-        
+
+        bool displayEmpty => display_tb.Text.Length == 0;
+        char lastEntry => display_tb.Text[display_tb.Text.Length - 1];
+        int lastEntryIndex => (display_tb.Text.Length - 1);
+
         bool isOperator(char c)
         {
             if (c == '-' || c == '÷' || c == '×' || c == '+') return true;
@@ -30,15 +34,6 @@ namespace Kalkulator
         void clearDisplay()
         {
             display_tb.Text = "";
-        }
-
-        char lastEntry()
-        {
-            return display_tb.Text[display_tb.Text.Length - 1];
-        }
-        int lastEntryIndex()
-        {
-            return display_tb.Text.Length - 1;
         }
 
         void removeLastEntry()
@@ -54,11 +49,6 @@ namespace Kalkulator
         void writeToDisplay(char c)
         {
             display_tb.Text += c;
-        }
-
-        bool displayEmpty()
-        {
-            return display_tb.Text.Length == 0;
         }
 
         double stringToDouble(string s)

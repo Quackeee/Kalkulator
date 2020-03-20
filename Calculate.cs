@@ -93,7 +93,7 @@ namespace Kalkulator
 
         void evaluateFromDisplay()
         {
-            if (isOperator(lastEntry()) || lastEntry()=='.')
+            if (isOperator(lastEntry) || lastEntry=='.')
             {
                 removeLastEntry();
             }
