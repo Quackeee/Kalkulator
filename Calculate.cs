@@ -105,7 +105,7 @@ namespace Kalkulator
 
             try
             {
-                display_tb.Text = calculatePostfixExpression(toPostfix(generateRawOutput(display_tb.Text))).ToString();
+                display_tb.Text = calculatePostfixExpression(toPostfix(generateRawOutput(display_tb.Text))).ToString().Replace(",",".");
             } catch (DivisionByZeroException)
             {
                 display_tb.Text = "err div0";

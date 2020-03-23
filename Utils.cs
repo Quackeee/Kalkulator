@@ -38,6 +38,7 @@ namespace Kalkulator
 
         void removeLastEntry()
         {
+            if (!displayEmpty)
             display_tb.Text = display_tb.Text.Remove(display_tb.Text.Length - 1, 1);
         }
 
